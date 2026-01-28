@@ -1,0 +1,127 @@
+#!/bin/sh
+# MariaDB s6 service
+
+MYSQL_DIR="${MYSQL_DIR:-/config}"
+DATADIR="${DATADIR:-$MYSQL_DIR/databases}"
+
+# Initialize database if needed
+if [ ! -d "$DATADIR/mysql" ]; then
+    echo "Initializing MariaDB database..."
+
+    # Check for root password
+    if [ -z "$MYSQL_ROOT_PASSWORD" ]; then
+        echo "WARNING: No MYSQL_ROOT_PASSWORD set. Using empty root password."
+        echo "This is insecure. Set MYSQL_ROOT_PASSWORD environment variable."
+    fi
+
+    # Initialize the database (skip default configs that set user=mysql)
+    if ! /usr/local/bin/mariadb-install-db \
+        --defaults-file=/dev/null \
+        --datadir="$DATADIR" \
+        --user=bsd \
+        --auth-root-authentication-method=normal \
+        --skip-test-db; then
+        echo "ERROR: mariadb-install-db failed. Check permissions and disk space."
+        exit 1
+    fi
+
+    # Create custom config if it doesn't exist
+    if [ ! -f "$MYSQL_DIR/custom.cnf" ]; then
+        cat > "$MYSQL_DIR/custom.cnf" << 'EOF'
+[mysqld]
+# Custom MariaDB configuration
+# Add your settings here
+EOF
+        chown bsd:bsd "$MYSQL_DIR/custom.cnf"
+    fi
+
+    # Start temporarily to set up users/databases
+    /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+        --datadir="$DATADIR" \
+        --socket=/var/run/mysql/mysql.sock \
+        --skip-networking \
+        --skip-grant-tables &
+    TEMP_PID=$!
+
+    # Wait for MariaDB to start
+    echo "Waiting for MariaDB to start..."
+    for i in $(seq 1 30); do
+        if /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -e "SELECT 1" >/dev/null 2>&1; then
+            break
+        fi
+        sleep 1
+    done
+
+    # Flush privileges and set root password
+    echo "Configuring MariaDB users..."
+    /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock << EOF
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';
+CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+EOF
+
+    # Create database if specified
+    if [ -n "$MYSQL_DATABASE" ]; then
+        echo "Creating database '$MYSQL_DATABASE'..."
+        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" \
+            -e "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE\`;"
+    fi
+
+    # Create user if specified
+    if [ -n "$MYSQL_USER" ] && [ -n "$MYSQL_PASSWORD" ]; then
+        echo "Creating user '$MYSQL_USER'..."
+        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" << EOF
+CREATE USER IF NOT EXISTS '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
+GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE:-*}\`.* TO '${MYSQL_USER}'@'%';
+FLUSH PRIVILEGES;
+EOF
+    fi
+
+    # Run init scripts from /docker-entrypoint-initdb.d/
+    if [ -d /docker-entrypoint-initdb.d ]; then
+        for f in /docker-entrypoint-initdb.d/*; do
+            [ -e "$f" ] || continue
+            case "$f" in
+                *.sh)
+                    if [ -x "$f" ]; then
+                        echo "Running $f"
+                        "$f"
+                    else
+                        echo "Sourcing $f"
+                        . "$f"
+                    fi
+                    ;;
+                *.sql)
+                    echo "Running $f"
+                    /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" < "$f"
+                    ;;
+                *.sql.gz)
+                    echo "Running $f"
+                    gunzip -c "$f" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD"
+                    ;;
+                *)
+                    echo "Ignoring $f"
+                    ;;
+            esac
+        done
+    fi
+
+    # Run remote SQL if specified
+    if [ -n "$REMOTE_SQL" ]; then
+        echo "Fetching and running remote SQL from $REMOTE_SQL"
+        fetch -qo - "$REMOTE_SQL" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD"
+    fi
+
+    # Stop temporary instance
+    kill $TEMP_PID 2>/dev/null
+    wait $TEMP_PID 2>/dev/null
+    sleep 2
+fi
+
+echo "Starting MariaDB..."
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+    --datadir="$DATADIR" \
+    --socket=/var/run/mysql/mysql.sock \
+    --bind-address=0.0.0.0 \
+    --port=3306

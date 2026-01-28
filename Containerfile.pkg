@@ -1,0 +1,63 @@
+ARG BASE_VERSION=15
+ARG MARIADB_VERSION=114
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+ARG MARIADB_VERSION
+
+ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="mariadb${MARIADB_VERSION}-server mariadb${MARIADB_VERSION}-client"
+ARG UPSTREAM_URL="https://mariadb.org/download/"
+
+# --- Metadata ---
+LABEL org.opencontainers.image.title="MariaDB" \
+      org.opencontainers.image.description="MariaDB database server for FreeBSD" \
+      org.opencontainers.image.source="https://github.com/daemonless/mariadb" \
+      org.opencontainers.image.url="https://mariadb.org/" \
+      org.opencontainers.image.documentation="https://mariadb.com/kb/en/documentation/" \
+      org.opencontainers.image.licenses="GPL-2.0" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="Database" \
+      io.daemonless.port="3306" \
+      io.daemonless.volumes="/config" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.pkg-source="pkg" \
+      io.daemonless.upstream-url="${UPSTREAM_URL}" \
+      io.daemonless.packages="${PACKAGES}"
+
+# Install MariaDB
+RUN pkg update && \
+    pkg install -y ${PACKAGES} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Create directories (LinuxServer-compatible paths)
+RUN mkdir -p /config/databases /config/log/mysql /var/run/mysql /run/secrets /docker-entrypoint-initdb.d && \
+    chown -R bsd:bsd /config /var/run/mysql /run/secrets /docker-entrypoint-initdb.d
+
+# Copy service definitions and init scripts
+COPY root/ /
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* /healthz 2>/dev/null || true
+
+# Store MariaDB version for scripts
+RUN mkdir -p /var/db/mariadb && echo "${MARIADB_VERSION}" > /var/db/mariadb/version
+
+# Extract package version for tagging
+RUN mkdir -p /app && \
+    pkg query '%v' mariadb${MARIADB_VERSION}-server | sed 's/_.*$//' > /app/version
+
+ENV MYSQL_DIR="/config" \
+    DATADIR="/config/databases" \
+    MARIADB_VERSION="${MARIADB_VERSION}" \
+    MYSQL_ROOT_PASSWORD="" \
+    MYSQL_DATABASE="" \
+    MYSQL_USER="" \
+    MYSQL_PASSWORD=""
+
+# https://mariadb.com/docs/server/reference/sql-statements/administrative-sql-statements/shutdown
+STOPSIGNAL SIGTERM
+
+EXPOSE 3306
+
+VOLUME /config

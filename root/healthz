@@ -1,0 +1,24 @@
+#!/bin/sh
+# MariaDB health check
+
+# Check if mariadbd is running
+if ! pgrep -x mariadbd >/dev/null 2>&1; then
+    echo "MariaDB process not running"
+    exit 1
+fi
+
+# Check if we can connect
+if [ -n "$MYSQL_ROOT_PASSWORD" ]; then
+    if ! /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" -e "SELECT 1" >/dev/null 2>&1; then
+        echo "Cannot connect to MariaDB"
+        exit 1
+    fi
+else
+    if ! /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -e "SELECT 1" >/dev/null 2>&1; then
+        echo "Cannot connect to MariaDB"
+        exit 1
+    fi
+fi
+
+echo "OK"
+exit 0

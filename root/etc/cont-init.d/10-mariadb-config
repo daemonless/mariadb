@@ -1,0 +1,28 @@
+#!/bin/sh
+# MariaDB configuration setup
+
+# Load secrets from *_FILE environment variables (Docker secrets pattern)
+for var in $(env | grep '_FILE=' | cut -d= -f1); do
+    base_var="${var%_FILE}"
+    file_path="$(eval echo \"\$$var\")"
+    if [ -f "$file_path" ]; then
+        value="$(cat "$file_path")"
+        export "$base_var"="$value"
+        echo "Loaded secret for $base_var from $file_path"
+    else
+        echo "Warning: Secret file $file_path not found for $var"
+    fi
+done
+
+MYSQL_DIR="${MYSQL_DIR:-/config}"
+DATADIR="${DATADIR:-$MYSQL_DIR/databases}"
+
+echo "Setting up MariaDB..."
+
+# Create required directories
+mkdir -p "$DATADIR" "$MYSQL_DIR/log/mysql" /var/run/mysql
+
+# Set ownership (bsd:bsd is UID/GID 1000:1000)
+chown -R bsd:bsd "$MYSQL_DIR" /var/run/mysql
+
+echo "MariaDB configuration complete"

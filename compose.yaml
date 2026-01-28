@@ -1,0 +1,22 @@
+name: mariadb
+
+services:
+  mariadb:
+    image: ghcr.io/daemonless/mariadb:latest
+    container_name: mariadb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - MYSQL_ROOT_PASSWORD=changeme
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
+    volumes:
+      - mariadb-config:/config
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+volumes:
+  mariadb-config:
