@@ -1,0 +1,32 @@
+name: Build MariaDB Container
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['*.md', 'LICENSE', '.gitignore']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  # MariaDB 11.4 (quarterly packages)
+  build-114:
+    uses: daemonless/daemonless/.github/workflows/build-app.yaml@main
+    with:
+      image_name: mariadb
+      image_tag: "11.4"
+      containerfile: Containerfile.pkg
+      build_args: "MARIADB_VERSION=114,BASE_VERSION=15-quarterly"
+      extra_tags: "11.4-pkg,pkg,latest"
+    secrets: inherit
+
+  # MariaDB 11.4 (latest packages)
+  build-114-pkg-latest:
+    uses: daemonless/daemonless/.github/workflows/build-app.yaml@main
+    with:
+      image_name: mariadb
+      image_tag: "11.4-pkg-latest"
+      containerfile: Containerfile.pkg
+      build_args: "MARIADB_VERSION=114,BASE_VERSION=15"
+      extra_tags: "pkg-latest"
+    secrets: inherit
