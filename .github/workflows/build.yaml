@@ -14,9 +14,9 @@ jobs:
     uses: daemonless/daemonless/.github/workflows/build-app.yaml@main
     with:
       image_name: mariadb
-      image_tag: "11.4-pkg"
+      image_tag: "11.4"
       build_args: "MARIADB_VERSION=114,BASE_VERSION=15-quarterly"
-      extra_tags: "11.4,pkg,latest"
+      extra_tags: "11.4-pkg,pkg,latest"
     secrets: inherit
 
   # MariaDB 11.4 (latest packages)
