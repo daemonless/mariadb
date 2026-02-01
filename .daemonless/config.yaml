@@ -4,16 +4,15 @@ cit:
   mode: port
   port: 3306
 
-# Multi-version tracking for generate_versions.py
-versions:
-  type: multi-version
+build:
   variants:
-    - id: "11.4"
-      pkg_name: mariadb114-server
-      build_args: { MARIADB_VERSION: "114", BASE_VERSION: "15-quarterly" }
-      tags: ["11.4", "11.4-pkg", "pkg", "latest"]
-      default: true
-    - id: "11.4-pkg-latest"
-      pkg_name: mariadb114-server
-      build_args: { MARIADB_VERSION: "114", BASE_VERSION: "15" }
-      tags: ["11.4-pkg-latest", "pkg-latest"]
+    - tag: "11.4"
+      args:
+        MARIADB_VERSION: "114"
+        BASE_VERSION: "15-quarterly"
+      aliases: ["11.4-pkg", "pkg", "latest"]
+    - tag: "11.4-pkg-latest"
+      args:
+        MARIADB_VERSION: "114"
+        BASE_VERSION: "15"
+      aliases: ["pkg-latest"]
