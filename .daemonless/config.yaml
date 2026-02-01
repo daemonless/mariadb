@@ -7,11 +7,13 @@ cit:
 build:
   variants:
     - tag: "11.4"
+      containerfile: Containerfile.pkg
       args:
         MARIADB_VERSION: "114"
         BASE_VERSION: "15-quarterly"
       aliases: ["11.4-pkg", "pkg", "latest"]
     - tag: "11.4-pkg-latest"
+      containerfile: Containerfile.pkg
       args:
         MARIADB_VERSION: "114"
         BASE_VERSION: "15"
