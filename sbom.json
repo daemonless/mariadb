@@ -1,11 +1,11 @@
 {
   "image": "mariadb",
-  "generated": "2026-02-01T23:30:25Z",
+  "generated": "2026-02-03T13:14:34Z",
   "tags": {
     "11.4-pkg-latest": {
       "app_version": "11.4.9",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-01T23:30:06Z",
+      "generated": "2026-02-03T13:14:00Z",
       "packages": {
         "freebsd": [
           {
@@ -202,7 +202,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.14.6"
+            "version": "2.15.1"
           },
           {
             "name": "mariadb114-client",
@@ -274,7 +274,7 @@
     "11.4": {
       "app_version": "11.4.9",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-01T23:30:13Z",
+      "generated": "2026-02-03T13:14:22Z",
       "packages": {
         "freebsd": [
           {
@@ -471,7 +471,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.14.6"
+            "version": "2.15.1"
           },
           {
             "name": "mariadb114-client",
