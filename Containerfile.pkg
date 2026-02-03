@@ -14,15 +14,15 @@ ARG PACKAGES="mariadb${MARIADB_VERSION}-server mariadb${MARIADB_VERSION}-client"
 ARG UPSTREAM_URL="https://mariadb.org/download/"
 
 # --- Metadata (Injected by Generator) ---
-LABEL org.opencontainers.image.title="Mariadb" \
-      org.opencontainers.image.description="" \
+LABEL org.opencontainers.image.title="MariaDB" \
+      org.opencontainers.image.description="MariaDB database server for FreeBSD." \
       org.opencontainers.image.source="https://github.com/daemonless/mariadb" \
-      org.opencontainers.image.url="" \
+      org.opencontainers.image.url="https://mariadb.org/" \
       org.opencontainers.image.documentation="https://mariadb.com/kb/en/documentation/" \
       org.opencontainers.image.licenses="GPL-2.0" \
       org.opencontainers.image.vendor="daemonless" \
       org.opencontainers.image.authors="daemonless" \
-      io.daemonless.category="Uncategorized" \
+      io.daemonless.category="Databases" \
       io.daemonless.port="3306" \
       io.daemonless.volumes="/config" \
       io.daemonless.arch="${FREEBSD_ARCH}" \

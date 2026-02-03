@@ -8,7 +8,7 @@ x-daemonless:
   upstream_url: "https://github.com/MariaDB/server"
   web_url: "https://mariadb.org/"
   freshports_url: "https://www.freshports.org/databases/mariadb114-server/"
-  user: "mysql"
+  user: "bsd"
   mlock: false
   upstream_binary: false
 
