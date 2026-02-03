@@ -1,5 +1,28 @@
 name: mariadb
 
+x-daemonless:
+  title: "MariaDB"
+  icon: ":simple-mariadb:"
+  category: "Databases"
+  description: "MariaDB database server for FreeBSD."
+  upstream_url: "https://github.com/MariaDB/server"
+  web_url: "https://mariadb.org/"
+  freshports_url: "https://www.freshports.org/databases/mariadb114-server/"
+  user: "mysql"
+  mlock: false
+  upstream_binary: false
+
+  docs:
+    env:
+      MYSQL_ROOT_PASSWORD: "Root password (required on first run)"
+      MYSQL_DATABASE: "Database to create on first run"
+      MYSQL_USER: "User to create on first run"
+      MYSQL_PASSWORD: "Password for MYSQL_USER"
+    volumes:
+      /config: "MariaDB configuration and data"
+    ports:
+      3306: "MariaDB port"
+
 services:
   mariadb:
     image: ghcr.io/daemonless/mariadb:latest
