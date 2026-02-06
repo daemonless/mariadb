@@ -1,11 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-02-03T13:14:34Z",
+  "generated": "2026-02-06T00:24:38Z",
   "tags": {
     "11.4-pkg-latest": {
+      "arch": "amd64",
       "app_version": "11.4.9",
-      "source": "freebsd-quarterly",
-      "generated": "2026-02-03T13:14:00Z",
+      "source": "freebsd-latest",
+      "generated": "2026-02-06T00:02:53Z",
       "packages": {
         "freebsd": [
           {
@@ -272,9 +273,10 @@
       }
     },
     "11.4": {
+      "arch": "amd64",
       "app_version": "11.4.9",
-      "source": "freebsd-quarterly",
-      "generated": "2026-02-03T13:14:22Z",
+      "source": "upstream-binary",
+      "generated": "2026-02-06T00:00:17Z",
       "packages": {
         "freebsd": [
           {
