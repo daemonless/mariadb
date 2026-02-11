@@ -1,11 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-02-01T23:30:25Z",
+  "generated": "2026-02-11T08:42:45Z",
   "tags": {
     "11.4-pkg-latest": {
+      "arch": "amd64",
       "app_version": "11.4.9",
-      "source": "freebsd-quarterly",
-      "generated": "2026-02-01T23:30:06Z",
+      "source": "freebsd-latest",
+      "generated": "2026-02-11T08:42:33Z",
       "packages": {
         "freebsd": [
           {
@@ -202,7 +203,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.14.6"
+            "version": "2.15.1"
           },
           {
             "name": "mariadb114-client",
@@ -258,23 +259,32 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 62,
         "dotnet": 0,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 62
       }
     },
     "11.4": {
+      "arch": "amd64",
       "app_version": "11.4.9",
-      "source": "freebsd-quarterly",
-      "generated": "2026-02-01T23:30:13Z",
+      "source": "upstream-binary",
+      "generated": "2026-02-11T08:42:22Z",
       "packages": {
         "freebsd": [
           {
@@ -471,7 +481,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.14.6"
+            "version": "2.15.1"
           },
           {
             "name": "mariadb114-client",
@@ -527,16 +537,24 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 62,
         "dotnet": 0,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 62
       }
     }
