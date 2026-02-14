@@ -49,7 +49,7 @@ RUN mkdir -p /var/db/mariadb && echo "${MARIADB_VERSION}" > /var/db/mariadb/vers
 
 # Extract package version for tagging
 RUN mkdir -p /app && \
-    pkg query '%v' mariadb${MARIADB_VERSION}-server | sed 's/_.*$//' > /app/version
+    pkg query '%v' mariadb${MARIADB_VERSION}-server > /app/version
 
 ENV MYSQL_DIR="/config" \
     DATADIR="/config/databases" \
