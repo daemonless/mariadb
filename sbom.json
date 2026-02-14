@@ -1,12 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-02-14T21:01:53Z",
+  "generated": "2026-02-14T21:17:45Z",
   "tags": {
     "11.4-pkg-latest": {
       "arch": "amd64",
       "app_version": "11.4.9",
       "source": "pkg",
-      "generated": "2026-02-14T21:01:25Z",
+      "generated": "2026-02-14T21:17:35Z",
       "packages": {
         "freebsd": [
           {
@@ -284,7 +284,7 @@
       "arch": "amd64",
       "app_version": "11.4.9",
       "source": "pkg",
-      "generated": "2026-02-14T21:01:44Z",
+      "generated": "2026-02-14T21:16:48Z",
       "packages": {
         "freebsd": [
           {
