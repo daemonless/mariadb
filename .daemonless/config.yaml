@@ -19,5 +19,5 @@ build:
       containerfile: Containerfile.pkg
       args:
         MARIADB_VERSION: "114"
-        BASE_VERSION: "15"
+        BASE_VERSION: "15-latest"
       aliases: ["pkg-latest"]
