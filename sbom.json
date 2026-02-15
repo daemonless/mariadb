@@ -1,12 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-02-15T12:03:39Z",
+  "generated": "2026-02-15T13:29:54Z",
   "tags": {
     "11.4-pkg-latest": {
       "arch": "amd64",
-      "app_version": "11.4.9",
+      "app_version": "11.4.10",
       "source": "pkg",
-      "generated": "2026-02-15T12:03:04Z",
+      "generated": "2026-02-15T13:29:44Z",
       "packages": {
         "freebsd": [
           {
@@ -147,7 +147,7 @@
           },
           {
             "name": "galera26",
-            "version": "26.4.22_2"
+            "version": "26.4.25"
           },
           {
             "name": "gettext-runtime",
@@ -203,15 +203,15 @@
           },
           {
             "name": "libxml2",
-            "version": "2.15.1"
+            "version": "2.15.1_1"
           },
           {
             "name": "mariadb114-client",
-            "version": "11.4.9"
+            "version": "11.4.10"
           },
           {
             "name": "mariadb114-server",
-            "version": "11.4.9"
+            "version": "11.4.10"
           },
           {
             "name": "oniguruma",
@@ -231,7 +231,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.1_5"
+            "version": "3.4.1_6"
           },
           {
             "name": "s6",
@@ -284,7 +284,7 @@
       "arch": "amd64",
       "app_version": "11.4.9",
       "source": "pkg",
-      "generated": "2026-02-15T12:03:27Z",
+      "generated": "2026-02-15T13:28:52Z",
       "packages": {
         "freebsd": [
           {
