@@ -5,15 +5,27 @@ Source: dbuild templates
 
 # MariaDB
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/mariadb/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/mariadb/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/daemonless/mariadb?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/mariadb/commits)
+
 MariaDB database server for FreeBSD.
 
 | | |
 |---|---|
 | **Port** | 3306 |
 | **Registry** | `ghcr.io/daemonless/mariadb` |
-| **Docs** | [daemonless.io/images/mariadb](https://daemonless.io/images/mariadb/) |
 | **Source** | [https://github.com/MariaDB/server](https://github.com/MariaDB/server) |
 | **Website** | [https://mariadb.org/](https://mariadb.org/) |
+
+## Version Tags
+
+| Tag | Description | Best For |
+| :--- | :--- | :--- |
+| `latest` | **FreeBSD Port**. Built from latest FreeBSD packages. | Most users. Matches Linux Docker behavior. |
+
+## Prerequisites
+
+Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
 
@@ -33,10 +45,61 @@ services:
       - MYSQL_USER=myuser
       - MYSQL_PASSWORD=mypassword
     volumes:
-      - /path/to/containers/mariadb:/config
+      - "/path/to/containers/mariadb:/config"
     ports:
       - 3306:3306
     restart: unless-stopped
+```
+
+### AppJail Director
+
+**.env**:
+
+```
+DIRECTOR_PROJECT=mariadb
+PUID=1000
+PGID=1000
+TZ=Etc/UTC
+MYSQL_ROOT_PASSWORD=changeme
+MYSQL_DATABASE=mydb
+MYSQL_USER=myuser
+MYSQL_PASSWORD=mypassword
+```
+
+**appjail-director.yml**:
+
+```yaml
+options:
+  - virtualnet: ':<random> default'
+  - nat:
+services:
+  mariadb:
+    name: mariadb
+    options:
+      - container: 'boot args:--pull'
+    oci:
+      environment:
+        - PUID: !ENV '${PUID}'
+        - PGID: !ENV '${PGID}'
+        - TZ: !ENV '${TZ}'
+        - MYSQL_ROOT_PASSWORD: !ENV '${MYSQL_ROOT_PASSWORD}'
+        - MYSQL_DATABASE: !ENV '${MYSQL_DATABASE}'
+        - MYSQL_USER: !ENV '${MYSQL_USER}'
+        - MYSQL_PASSWORD: !ENV '${MYSQL_PASSWORD}'
+    volumes:
+      - mariadb: /config
+volumes:
+  mariadb:
+    device: '/path/to/containers/mariadb'
+```
+
+**Makejail**:
+
+```
+ARG tag=latest
+
+OPTION overwrite=force
+OPTION from=ghcr.io/daemonless/mariadb:${tag}
 ```
 
 ### Podman CLI
@@ -44,9 +107,9 @@ services:
 ```bash
 podman run -d --name mariadb \
   -p 3306:3306 \
-  -e PUID=@PUID@ \
-  -e PGID=@PGID@ \
-  -e TZ=@TZ@ \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Etc/UTC \
   -e MYSQL_ROOT_PASSWORD=changeme \
   -e MYSQL_DATABASE=mydb \
   -e MYSQL_USER=myuser \
@@ -54,7 +117,6 @@ podman run -d --name mariadb \
   -v /path/to/containers/mariadb:/config \
   ghcr.io/daemonless/mariadb:latest
 ```
-Access at: `http://localhost:3306`
 
 ### Ansible
 
@@ -66,9 +128,9 @@ Access at: `http://localhost:3306`
     state: started
     restart_policy: always
     env:
-      PUID: "@PUID@"
-      PGID: "@PGID@"
-      TZ: "@TZ@"
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "Etc/UTC"
       MYSQL_ROOT_PASSWORD: "changeme"
       MYSQL_DATABASE: "mydb"
       MYSQL_USER: "myuser"
@@ -79,7 +141,10 @@ Access at: `http://localhost:3306`
       - "/path/to/containers/mariadb:/config"
 ```
 
-## Configuration
+Access at: `http://localhost:3306`
+
+## Parameters
+
 ### Environment Variables
 
 | Variable | Default | Description |
@@ -91,19 +156,23 @@ Access at: `http://localhost:3306`
 | `MYSQL_DATABASE` | `mydb` | Database to create on first run |
 | `MYSQL_USER` | `myuser` | User to create on first run |
 | `MYSQL_PASSWORD` | `mypassword` | Password for MYSQL_USER |
+
 ### Volumes
 
 | Path | Description |
 |------|-------------|
 | `/config` | MariaDB configuration and data |
+
 ### Ports
 
 | Port | Protocol | Description |
 |------|----------|-------------|
 | `3306` | TCP | MariaDB port |
 
-## Notes
+**Architectures:** amd64
+**User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
+**Base:** FreeBSD 15.0
 
-- **Architectures:** amd64
-- **User:** `bsd` (UID/GID set via PUID/PGID)
-- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
+---
+
+Need help? Join our [Discord](https://discord.gg/Kb9tkhecZT) community.
