@@ -1,12 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-03-04T09:18:47Z",
+  "generated": "2026-03-16T22:36:52Z",
   "tags": {
     "11.4-pkg-latest": {
       "arch": "amd64",
       "app_version": "11.4.10",
       "source": "pkg",
-      "generated": "2026-03-04T09:18:29Z",
+      "generated": "2026-03-16T22:35:19Z",
       "packages": {
         "freebsd": [
           {
@@ -143,7 +143,7 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "galera26",
@@ -203,7 +203,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.15.1_1"
+            "version": "2.15.2"
           },
           {
             "name": "mariadb114-client",
@@ -223,7 +223,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.0"
+            "version": "2.6.2"
           },
           {
             "name": "readline",
@@ -235,15 +235,15 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "s6-rc",
-            "version": "0.5.6.0"
+            "version": "0.6.0.0"
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "unixODBC",
@@ -284,7 +284,7 @@
       "arch": "amd64",
       "app_version": "11.4.9",
       "source": "pkg",
-      "generated": "2026-03-04T09:17:52Z",
+      "generated": "2026-03-16T22:36:41Z",
       "packages": {
         "freebsd": [
           {
@@ -481,7 +481,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.15.1"
+            "version": "2.15.2"
           },
           {
             "name": "mariadb114-client",
