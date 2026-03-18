@@ -7,7 +7,7 @@ x-daemonless:
   description: "MariaDB database server for FreeBSD."
   upstream_url: "https://github.com/MariaDB/server"
   web_url: "https://mariadb.org/"
-  freshports_url: "https://www.freshports.org/databases/mariadb114-server/"
+  freshports_url: "https://www.freshports.org/databases/mariadb118-server/"
   user: "bsd"
   mlock: false
   upstream_binary: false

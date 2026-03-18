@@ -12,12 +12,25 @@ build:
       args:
         MARIADB_VERSION: "114"
         BASE_VERSION: "15-quarterly"
-      aliases: ["11.4-pkg", "pkg", "latest"]
-      default: true
+      aliases: ["11.4-pkg"]
     - tag: "11.4-pkg-latest"
       pkg_name: mariadb114-server
       containerfile: Containerfile.pkg
       args:
         MARIADB_VERSION: "114"
+        BASE_VERSION: "15-latest"
+    - tag: "11.8"
+      pkg_name: mariadb118-server
+      containerfile: Containerfile.pkg
+      args:
+        MARIADB_VERSION: "118"
+        BASE_VERSION: "15-quarterly"
+      aliases: ["11.8-pkg", "pkg", "latest"]
+      default: true
+    - tag: "11.8-pkg-latest"
+      pkg_name: mariadb118-server
+      containerfile: Containerfile.pkg
+      args:
+        MARIADB_VERSION: "118"
         BASE_VERSION: "15-latest"
       aliases: ["pkg-latest"]
