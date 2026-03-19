@@ -8,7 +8,7 @@ Source: dbuild templates
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/mariadb/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/mariadb/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/mariadb?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/mariadb/commits)
 
-MariaDB database server for FreeBSD.
+Drop-in replacement for MySQL built by the original authors — extends core MySQL functionality with alternate storage engines, server optimizations, and patches.
 
 | | |
 |---|---|

@@ -15,7 +15,7 @@ ARG UPSTREAM_URL="https://mariadb.org/download/"
 
 # --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="MariaDB" \
-      org.opencontainers.image.description="MariaDB database server for FreeBSD." \
+      org.opencontainers.image.description="Drop-in replacement for MySQL built by the original authors — extends core MySQL functionality with alternate storage engines, server optimizations, and patches." \
       org.opencontainers.image.source="https://github.com/daemonless/mariadb" \
       org.opencontainers.image.url="https://mariadb.org/" \
       org.opencontainers.image.documentation="https://mariadb.com/kb/en/documentation/" \
