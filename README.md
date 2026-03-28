@@ -10,6 +10,7 @@ Source: dbuild templates
 
 Drop-in replacement for MySQL built by the original authors — extends core MySQL functionality with alternate storage engines, server optimizations, and patches.
 
+
 | | |
 |---|---|
 | **Port** | 3306 |
