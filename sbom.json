@@ -1,12 +1,12 @@
 {
   "image": "mariadb",
-  "generated": "2026-03-19T20:52:57Z",
+  "generated": "2026-03-29T20:48:34Z",
   "tags": {
     "11.4-pkg-latest": {
       "arch": "amd64",
       "app_version": "11.4.10",
       "source": "pkg",
-      "generated": "2026-03-19T20:51:42Z",
+      "generated": "2026-03-29T20:48:19Z",
       "packages": {
         "freebsd": [
           {
@@ -138,8 +138,12 @@
             "version": "1.2.0,1"
           },
           {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
+          },
+          {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "execline",
@@ -268,7 +272,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 62,
+        "freebsd": 63,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -277,14 +281,14 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 62
+        "total": 63
       }
     },
     "11.4": {
       "arch": "amd64",
       "app_version": "11.4.9",
       "source": "pkg",
-      "generated": "2026-03-19T20:51:21Z",
+      "generated": "2026-03-29T20:47:56Z",
       "packages": {
         "freebsd": [
           {
@@ -414,6 +418,10 @@
           {
             "name": "brotli",
             "version": "1.2.0,1"
+          },
+          {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
           },
           {
             "name": "curl",
@@ -546,7 +554,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 62,
+        "freebsd": 63,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -555,14 +563,14 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 62
+        "total": 63
       }
     },
     "11.8-pkg-latest": {
       "arch": "amd64",
       "app_version": "11.8.6",
       "source": "pkg",
-      "generated": "2026-03-19T20:51:16Z",
+      "generated": "2026-03-29T20:48:05Z",
       "packages": {
         "freebsd": [
           {
@@ -694,8 +702,12 @@
             "version": "1.2.0,1"
           },
           {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
+          },
+          {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "execline",
@@ -824,7 +836,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 62,
+        "freebsd": 63,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -833,14 +845,14 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 62
+        "total": 63
       }
     },
     "11.8": {
       "arch": "amd64",
       "app_version": "11.8.5",
       "source": "pkg",
-      "generated": "2026-03-19T20:52:43Z",
+      "generated": "2026-03-29T20:48:18Z",
       "packages": {
         "freebsd": [
           {
@@ -970,6 +982,10 @@
           {
             "name": "brotli",
             "version": "1.2.0,1"
+          },
+          {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
           },
           {
             "name": "curl",
@@ -1102,7 +1118,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 62,
+        "freebsd": 63,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -1111,7 +1127,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 62
+        "total": 63
       }
     }
   }
