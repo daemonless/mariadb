@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-05T20:05:28Z",
+  "generated": "2026-04-07T15:03:33Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
-      "app_version": "11.4.9",
+      "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-04-05T20:04:17Z",
+      "generated": "2026-04-07T14:47:29Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -143,7 +143,7 @@
           },
           {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "execline",
@@ -151,11 +151,11 @@
           },
           {
             "name": "galera26",
-            "version": "26.4.22_2"
+            "version": "26.4.25"
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "icu",
@@ -203,7 +203,7 @@
           },
           {
             "name": "libunistring",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "libxml2",
@@ -211,11 +211,11 @@
           },
           {
             "name": "mariadb114-client",
-            "version": "11.4.9"
+            "version": "11.4.10"
           },
           {
             "name": "mariadb114-server",
-            "version": "11.4.9"
+            "version": "11.4.10"
           },
           {
             "name": "oniguruma",
@@ -227,7 +227,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "readline",
@@ -235,7 +235,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.1_5"
+            "version": "3.4.1_6"
           },
           {
             "name": "s6",
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-04-05T20:03:31Z",
+      "generated": "2026-04-07T14:46:00Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -559,9 +559,9 @@
       }
     },
     "11.8": {
-      "app_version": "11.8.5",
+      "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-04-05T20:04:01Z",
+      "generated": "2026-04-07T15:02:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -699,7 +699,7 @@
           },
           {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "execline",
@@ -707,11 +707,11 @@
           },
           {
             "name": "galera26",
-            "version": "26.4.22_2"
+            "version": "26.4.25"
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "icu",
@@ -759,7 +759,7 @@
           },
           {
             "name": "libunistring",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "libxml2",
@@ -767,11 +767,11 @@
           },
           {
             "name": "mariadb118-client",
-            "version": "11.8.5"
+            "version": "11.8.6"
           },
           {
             "name": "mariadb118-server",
-            "version": "11.8.5"
+            "version": "11.8.6"
           },
           {
             "name": "oniguruma",
@@ -783,7 +783,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "readline",
@@ -791,7 +791,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.1_5"
+            "version": "3.4.1_6"
           },
           {
             "name": "s6",
@@ -839,7 +839,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-04-05T20:03:34Z",
+      "generated": "2026-04-07T14:53:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
