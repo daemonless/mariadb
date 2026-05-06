@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-30T23:38:38Z",
+  "generated": "2026-05-06T23:11:45Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
       "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-04-30T23:36:25Z",
+      "generated": "2026-05-06T22:59:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -123,7 +123,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "bash",
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-04-30T23:36:45Z",
+      "generated": "2026-05-06T23:04:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -373,7 +373,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -401,7 +401,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "bash",
@@ -421,7 +421,7 @@
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "execline",
@@ -505,7 +505,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "readline",
@@ -561,7 +561,7 @@
     "11.8": {
       "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-04-30T23:35:33Z",
+      "generated": "2026-05-06T23:03:36Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -651,7 +651,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -679,7 +679,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "bash",
@@ -839,7 +839,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-04-30T23:37:23Z",
+      "generated": "2026-05-06T23:08:12Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -929,7 +929,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -957,7 +957,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "bash",
@@ -977,7 +977,7 @@
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "execline",
@@ -1061,7 +1061,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "readline",
