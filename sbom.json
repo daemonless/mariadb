@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-06T23:11:45Z",
+  "generated": "2026-05-16T16:28:30Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
       "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-05-06T22:59:22Z",
+      "generated": "2026-05-16T16:25:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -139,11 +139,11 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "execline",
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.10",
       "arch": "amd64",
-      "generated": "2026-05-06T23:04:50Z",
+      "generated": "2026-05-16T16:27:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -417,7 +417,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
@@ -433,7 +433,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
@@ -561,7 +561,7 @@
     "11.8": {
       "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-05-06T23:03:36Z",
+      "generated": "2026-05-16T16:26:13Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -695,11 +695,11 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "execline",
@@ -839,7 +839,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.6",
       "arch": "amd64",
-      "generated": "2026-05-06T23:08:12Z",
+      "generated": "2026-05-16T16:25:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -973,7 +973,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
@@ -989,7 +989,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
