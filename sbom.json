@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-22T20:51:39Z",
+  "generated": "2026-05-24T20:29:55Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
-      "app_version": "11.4.10",
+      "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-22T20:50:12Z",
+      "generated": "2026-05-24T20:27:28Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -211,11 +211,11 @@
           },
           {
             "name": "mariadb114-client",
-            "version": "11.4.10"
+            "version": "11.4.11"
           },
           {
             "name": "mariadb114-server",
-            "version": "11.4.10"
+            "version": "11.4.11"
           },
           {
             "name": "oniguruma",
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-22T20:50:03Z",
+      "generated": "2026-05-24T20:26:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -513,7 +513,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.2"
+            "version": "3.4.3"
           },
           {
             "name": "s6",
@@ -559,9 +559,9 @@
       }
     },
     "11.8": {
-      "app_version": "11.8.6",
+      "app_version": "11.8.7",
       "arch": "amd64",
-      "generated": "2026-05-22T20:49:39Z",
+      "generated": "2026-05-24T20:28:44Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -767,11 +767,11 @@
           },
           {
             "name": "mariadb118-client",
-            "version": "11.8.6"
+            "version": "11.8.7"
           },
           {
             "name": "mariadb118-server",
-            "version": "11.8.6"
+            "version": "11.8.7"
           },
           {
             "name": "oniguruma",
@@ -839,7 +839,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.7",
       "arch": "amd64",
-      "generated": "2026-05-22T20:50:29Z",
+      "generated": "2026-05-24T20:27:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1069,7 +1069,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.2"
+            "version": "3.4.3"
           },
           {
             "name": "s6",
