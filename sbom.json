@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-24T20:29:55Z",
+  "generated": "2026-05-28T22:43:29Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
       "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-24T20:27:28Z",
+      "generated": "2026-05-28T22:42:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -51,7 +51,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -107,7 +107,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -139,7 +139,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -235,7 +235,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.1_6"
+            "version": "3.4.3"
           },
           {
             "name": "s6",
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-24T20:26:49Z",
+      "generated": "2026-05-28T22:40:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -329,7 +329,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -373,7 +373,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -385,7 +385,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -417,7 +417,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -533,7 +533,7 @@
           },
           {
             "name": "zstd",
-            "version": "1.5.7_1"
+            "version": "1.5.7_2"
           }
         ],
         "go": [],
@@ -561,7 +561,7 @@
     "11.8": {
       "app_version": "11.8.7",
       "arch": "amd64",
-      "generated": "2026-05-24T20:28:44Z",
+      "generated": "2026-05-28T22:41:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -607,7 +607,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -651,7 +651,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -663,7 +663,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -695,7 +695,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -791,7 +791,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.1_6"
+            "version": "3.4.3"
           },
           {
             "name": "s6",
@@ -839,7 +839,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.7",
       "arch": "amd64",
-      "generated": "2026-05-24T20:27:07Z",
+      "generated": "2026-05-28T22:40:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -885,7 +885,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -929,7 +929,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -941,7 +941,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -973,7 +973,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -1089,7 +1089,7 @@
           },
           {
             "name": "zstd",
-            "version": "1.5.7_1"
+            "version": "1.5.7_2"
           }
         ],
         "go": [],
