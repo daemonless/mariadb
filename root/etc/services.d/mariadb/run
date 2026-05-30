@@ -25,6 +25,10 @@ if [ ! -d "$DATADIR/mysql" ]; then
         exit 1
     fi
 
+    # mariadb-install-db runs as root and leaves some files (e.g. mariadb_upgrade_info)
+    # owned by root — re-own the datadir to bsd so PUID owns everything under /config
+    chown -R bsd:bsd "$DATADIR"
+
     # Create custom config if it doesn't exist
     if [ ! -f "$MYSQL_DIR/custom.cnf" ]; then
         cat > "$MYSQL_DIR/custom.cnf" << 'EOF'
