@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-28T22:43:29Z",
+  "generated": "2026-05-30T18:28:46Z",
   "image": "mariadb",
   "tags": {
     "11.4": {
       "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-28T22:42:17Z",
+      "generated": "2026-05-30T18:27:12Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -283,7 +283,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.11",
       "arch": "amd64",
-      "generated": "2026-05-28T22:40:33Z",
+      "generated": "2026-05-30T18:27:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -561,7 +561,7 @@
     "11.8": {
       "app_version": "11.8.7",
       "arch": "amd64",
-      "generated": "2026-05-28T22:41:54Z",
+      "generated": "2026-05-30T18:27:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -837,9 +837,9 @@
       }
     },
     "11.8-pkg-latest": {
-      "app_version": "11.8.7",
+      "app_version": "11.8.8",
       "arch": "amd64",
-      "generated": "2026-05-28T22:40:33Z",
+      "generated": "2026-05-30T18:27:25Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1045,11 +1045,11 @@
           },
           {
             "name": "mariadb118-client",
-            "version": "11.8.7"
+            "version": "11.8.8"
           },
           {
             "name": "mariadb118-server",
-            "version": "11.8.7"
+            "version": "11.8.8"
           },
           {
             "name": "oniguruma",
