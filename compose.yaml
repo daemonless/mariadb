@@ -7,7 +7,7 @@ x-daemonless:
   description: "Drop-in replacement for MySQL built by the original authors — extends core MySQL functionality with alternate storage engines, server optimizations, and patches."
   upstream_url: "https://github.com/MariaDB/server"
   web_url: "https://mariadb.org/"
-  freshports_url: "https://www.freshports.org/databases/mariadb118-server/"
+  freshports_url: "https://www.freshports.org/databases/mariadb123-server/"
   user: "bsd"
   mlock: false
   upstream_binary: false
