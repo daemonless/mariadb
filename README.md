@@ -20,7 +20,6 @@ Drop-in replacement for MySQL built by the original authors — extends core MyS
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `10.6` / `10.6-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 | `10.11` / `10.11-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 | `11.4` / `11.4-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 | `11.8` / `11.8-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |

@@ -6,13 +6,6 @@ cit:
 
 build:
   variants:
-    - tag: "10.6-pkg-latest"
-      pkg_name: mariadb106-server
-      containerfile: Containerfile.pkg
-      args:
-        MARIADB_VERSION: "106"
-        BASE_VERSION: "15.1-latest"
-      aliases: ["10.6"]
     - tag: "10.11-pkg-latest"
       pkg_name: mariadb1011-server
       containerfile: Containerfile.pkg
