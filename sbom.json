@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-25T21:52:16Z",
+  "generated": "2026-07-07T15:13:59Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest": {
       "app_version": "10.11.18",
       "arch": "amd64",
-      "generated": "2026-06-25T21:11:15Z",
+      "generated": "2026-07-07T15:11:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -27,7 +27,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -99,7 +99,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -111,7 +111,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -119,7 +119,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -151,7 +151,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "execline",
@@ -175,7 +175,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libedit",
@@ -203,11 +203,11 @@
           },
           {
             "name": "libpsl",
-            "version": "0.21.5_2"
+            "version": "0.22.0"
           },
           {
             "name": "libssh2",
-            "version": "1.11.1,3"
+            "version": "1.11.1_1,3"
           },
           {
             "name": "libunistring",
@@ -243,7 +243,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.4"
+            "version": "3.4.4_1"
           },
           {
             "name": "s6",
@@ -288,264 +288,10 @@
         "total": 64
       }
     },
-    "10.6-pkg-latest": {
-      "app_version": "10.6.27",
-      "arch": "amd64",
-      "generated": "2026-06-25T21:11:59Z",
-      "packages": {
-        "dotnet": [],
-        "freebsd": [
-          {
-            "name": "FreeBSD-audit-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-blocklist",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-bzip2-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-certctl",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-clibs",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-ctf-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-fetch",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-kerberos-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libarchive",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libbsdstat",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libcasper",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libexecinfo",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libldns",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libmagic",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-libucl",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-mtree",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-ncurses-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-openssl",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-pam-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-pkg-bootstrap",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-rc",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-runtime",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-tcpd",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-ufs-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-utilities",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-xz-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-zlib",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-zoneinfo",
-            "version": "15.1"
-          },
-          {
-            "name": "FreeBSD-zstd-lib",
-            "version": "15.1"
-          },
-          {
-            "name": "bash",
-            "version": "5.3.15"
-          },
-          {
-            "name": "boost-libs",
-            "version": "1.89.0_2"
-          },
-          {
-            "name": "ca_root_nss",
-            "version": "3.124"
-          },
-          {
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "name": "galera26",
-            "version": "26.4.25"
-          },
-          {
-            "name": "gettext-runtime",
-            "version": "1.0_1"
-          },
-          {
-            "name": "icu",
-            "version": "76.1,1"
-          },
-          {
-            "name": "indexinfo",
-            "version": "0.3.1_1"
-          },
-          {
-            "name": "jq",
-            "version": "1.8.1"
-          },
-          {
-            "name": "libedit",
-            "version": "3.1.20260512,1"
-          },
-          {
-            "name": "libiconv",
-            "version": "1.18_1"
-          },
-          {
-            "name": "liblz4",
-            "version": "1.10.0_2,1"
-          },
-          {
-            "name": "libxml2",
-            "version": "2.15.3"
-          },
-          {
-            "name": "mariadb106-client",
-            "version": "10.6.27"
-          },
-          {
-            "name": "mariadb106-server",
-            "version": "10.6.27"
-          },
-          {
-            "name": "oniguruma",
-            "version": "6.9.10"
-          },
-          {
-            "name": "pcre2",
-            "version": "10.47_1"
-          },
-          {
-            "name": "pkg",
-            "version": "2.7.5"
-          },
-          {
-            "name": "readline",
-            "version": "8.3.3"
-          },
-          {
-            "name": "rsync",
-            "version": "3.4.4"
-          },
-          {
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "name": "unixODBC",
-            "version": "2.3.12_2"
-          },
-          {
-            "name": "xxhash",
-            "version": "0.8.3"
-          },
-          {
-            "name": "zstd",
-            "version": "1.5.7_2"
-          }
-        ],
-        "go": [],
-        "java": [],
-        "node": [],
-        "php": [],
-        "python": [],
-        "ruby": [],
-        "rust": []
-      },
-      "source": "pkg",
-      "summary": {
-        "dotnet": 0,
-        "freebsd": 56,
-        "go": 0,
-        "java": 0,
-        "node": 0,
-        "php": 0,
-        "python": 0,
-        "ruby": 0,
-        "rust": 0,
-        "total": 56
-      }
-    },
     "11.4-pkg-latest": {
       "app_version": "11.4.12",
       "arch": "amd64",
-      "generated": "2026-06-25T21:11:13Z",
+      "generated": "2026-07-07T15:12:48Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -567,7 +313,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -639,7 +385,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -651,7 +397,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -659,7 +405,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -691,7 +437,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "execline",
@@ -715,7 +461,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libedit",
@@ -743,11 +489,11 @@
           },
           {
             "name": "libpsl",
-            "version": "0.21.5_2"
+            "version": "0.22.0"
           },
           {
             "name": "libssh2",
-            "version": "1.11.1,3"
+            "version": "1.11.1_1,3"
           },
           {
             "name": "libunistring",
@@ -783,7 +529,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.4"
+            "version": "3.4.4_1"
           },
           {
             "name": "s6",
@@ -831,7 +577,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.8",
       "arch": "amd64",
-      "generated": "2026-06-25T21:11:32Z",
+      "generated": "2026-07-07T15:11:34Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -853,7 +599,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -925,7 +671,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -937,7 +683,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -945,7 +691,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -977,7 +723,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "execline",
@@ -1001,7 +747,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libedit",
@@ -1029,11 +775,11 @@
           },
           {
             "name": "libpsl",
-            "version": "0.21.5_2"
+            "version": "0.22.0"
           },
           {
             "name": "libssh2",
-            "version": "1.11.1,3"
+            "version": "1.11.1_1,3"
           },
           {
             "name": "libunistring",
@@ -1069,7 +815,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.4"
+            "version": "3.4.4_1"
           },
           {
             "name": "s6",
@@ -1117,7 +863,7 @@
     "12.3-pkg-latest": {
       "app_version": "12.3.2_1",
       "arch": "amd64",
-      "generated": "2026-06-25T21:51:05Z",
+      "generated": "2026-07-07T15:12:08Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1139,7 +885,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1211,7 +957,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1223,7 +969,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1231,7 +977,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1263,7 +1009,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "execline",
@@ -1287,7 +1033,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libedit",
@@ -1315,11 +1061,11 @@
           },
           {
             "name": "libpsl",
-            "version": "0.21.5_2"
+            "version": "0.22.0"
           },
           {
             "name": "libssh2",
-            "version": "1.11.1,3"
+            "version": "1.11.1_1,3"
           },
           {
             "name": "libunistring",
@@ -1355,7 +1101,7 @@
           },
           {
             "name": "rsync",
-            "version": "3.4.4"
+            "version": "3.4.4_1"
           },
           {
             "name": "s6",
