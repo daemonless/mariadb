@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-07T15:13:59Z",
+  "generated": "2026-07-18T23:52:15Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest": {
       "app_version": "10.11.18",
       "arch": "amd64",
-      "generated": "2026-07-07T15:11:46Z",
+      "generated": "2026-07-18T23:49:55Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -67,6 +67,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -147,7 +151,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "curl",
@@ -277,7 +281,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 64,
+        "freebsd": 65,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -285,13 +289,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 64
+        "total": 65
       }
     },
     "11.4-pkg-latest": {
       "app_version": "11.4.12",
       "arch": "amd64",
-      "generated": "2026-07-07T15:12:48Z",
+      "generated": "2026-07-18T23:51:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -353,6 +357,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -433,7 +441,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "curl",
@@ -563,7 +571,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 64,
+        "freebsd": 65,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -571,13 +579,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 64
+        "total": 65
       }
     },
     "11.8-pkg-latest": {
       "app_version": "11.8.8",
       "arch": "amd64",
-      "generated": "2026-07-07T15:11:34Z",
+      "generated": "2026-07-18T23:50:08Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -639,6 +647,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -719,7 +731,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "curl",
@@ -849,7 +861,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 64,
+        "freebsd": 65,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -857,13 +869,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 64
+        "total": 65
       }
     },
     "12.3-pkg-latest": {
       "app_version": "12.3.2_1",
       "arch": "amd64",
-      "generated": "2026-07-07T15:12:08Z",
+      "generated": "2026-07-18T23:50:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -925,6 +937,10 @@
           },
           {
             "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-locales",
             "version": "15.1"
           },
           {
@@ -1005,7 +1021,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "curl",
@@ -1135,7 +1151,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 64,
+        "freebsd": 65,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1143,7 +1159,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 64
+        "total": 65
       }
     }
   }
