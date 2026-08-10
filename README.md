@@ -81,7 +81,7 @@ services:
     name: mariadb
     options:
       - container: 'boot args:--pull'
-      - expose: '3306:3306 proto:tcp' \
+      - expose: '3306:3306 proto:tcp'
     oci:
       user: root
       environment:

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-01T20:15:43Z",
+  "generated": "2026-08-10T07:30:19Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest": {
       "app_version": "10.11.18",
       "arch": "amd64",
-      "generated": "2026-08-01T19:53:13Z",
+      "generated": "2026-08-10T07:27:48Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -496,7 +496,7 @@
     "11.4-pkg-latest": {
       "app_version": "11.4.12",
       "arch": "amd64",
-      "generated": "2026-08-01T19:47:37Z",
+      "generated": "2026-08-10T07:28:27Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -987,7 +987,7 @@
     "11.8-pkg-latest": {
       "app_version": "11.8.8",
       "arch": "amd64",
-      "generated": "2026-08-01T20:04:00Z",
+      "generated": "2026-08-10T07:28:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1478,7 +1478,7 @@
     "12.3-pkg-latest": {
       "app_version": "12.3.2_1",
       "arch": "amd64",
-      "generated": "2026-08-01T19:59:19Z",
+      "generated": "2026-08-10T07:27:55Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
