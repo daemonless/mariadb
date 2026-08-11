@@ -20,10 +20,10 @@ Drop-in replacement for MySQL built by the original authors — extends core MyS
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `10.11` / `10.11-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `11.4` / `11.4-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `11.8` / `11.8-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `12.3` / `12.3-pkg-latest` / `latest` / `pkg` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `10.11` / `10.11-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
+| `11.4` / `11.4-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
+| `11.8` / `11.8-pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
+| `12.3` / `12.3-pkg-latest` / `latest` / `pkg` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
@@ -197,7 +197,7 @@ appjail oci run -Pd \
 |------|----------|-------------|
 | `3306` | TCP | MariaDB port |
 
-**Architectures:** amd64
+**Architectures:** amd64, aarch64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
 
