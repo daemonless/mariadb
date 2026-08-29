@@ -49,8 +49,11 @@ services:
       - "/path/to/containers/mariadb:/config"
     ports:
       - "3306:3306"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -109,6 +112,9 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/mariadb:${tag}
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -126,6 +132,8 @@ podman run -d --name mariadb \
   -v /path/to/containers/mariadb:/config \
   ghcr.io/daemonless/mariadb:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -146,7 +154,46 @@ appjail oci run -Pd \
   -o fstab="/path/to/containers/mariadb /config <pseudofs>" \
   ghcr.io/daemonless/mariadb:latest mariadb
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  mariadb:
+    image: "ghcr.io/daemonless/mariadb:latest"
+    container_name: mariadb
+    network_mode: host  # jail shares host networking
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - MYSQL_ROOT_PASSWORD=changeme
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --env PUID=1000 \
+  --env PGID=1000 \
+  --env TZ=Etc/UTC \
+  --env MYSQL_ROOT_PASSWORD=changeme \
+  --env MYSQL_DATABASE=mydb \
+  --env MYSQL_USER=myuser \
+  --env MYSQL_PASSWORD=mypassword \
+  --data-path /path/to/containers/mariadb \
+  mariadb ghcr.io/daemonless/mariadb:latest inherit
+```
 
 ### Ansible
 
@@ -170,6 +217,8 @@ appjail oci run -Pd \
     volumes:
       - "/path/to/containers/mariadb:/config"
 ```
+
+Save as `mariadb-deploy.yaml`, then run `ansible-playbook mariadb-deploy.yaml`.
 
 ## Parameters
 

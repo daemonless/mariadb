@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-11T09:49:40Z",
+  "generated": "2026-08-29T17:08:28Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-amd64": {
-      "app_version": "10.11.18",
+      "app_version": "10.11.19",
       "arch": "amd64",
-      "generated": "2026-08-11T09:48:20Z",
+      "generated": "2026-08-29T17:07:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -245,7 +245,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.89.0_3"
+            "version": "1.91.0"
           },
           {
             "licenses": [
@@ -259,7 +259,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -280,7 +280,7 @@
               "GPLv2"
             ],
             "name": "galera26",
-            "version": "26.4.25"
+            "version": "26.4.25_1"
           },
           {
             "licenses": [
@@ -352,14 +352,14 @@
               "MIT"
             ],
             "name": "libnghttp2",
-            "version": "1.69.0"
+            "version": "1.70.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "libpsl",
-            "version": "0.22.0"
+            "version": "0.23.3"
           },
           {
             "licenses": [
@@ -389,14 +389,14 @@
               "GPLv2"
             ],
             "name": "mariadb1011-client",
-            "version": "10.11.18"
+            "version": "10.11.19"
           },
           {
             "licenses": [
               "GPLv2"
             ],
             "name": "mariadb1011-server",
-            "version": "10.11.18"
+            "version": "10.11.19"
           },
           {
             "licenses": [
@@ -417,7 +417,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.1_1"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -431,7 +431,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.4.4_1"
+            "version": "3.5.0"
           },
           {
             "licenses": [
@@ -494,9 +494,9 @@
       }
     },
     "11.4-pkg-latest-amd64": {
-      "app_version": "11.4.12",
+      "app_version": "11.4.13",
       "arch": "amd64",
-      "generated": "2026-08-11T09:48:43Z",
+      "generated": "2026-08-29T17:06:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -736,7 +736,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.89.0_3"
+            "version": "1.91.0"
           },
           {
             "licenses": [
@@ -750,7 +750,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -771,7 +771,7 @@
               "GPLv2"
             ],
             "name": "galera26",
-            "version": "26.4.25"
+            "version": "26.4.25_1"
           },
           {
             "licenses": [
@@ -843,14 +843,14 @@
               "MIT"
             ],
             "name": "libnghttp2",
-            "version": "1.69.0"
+            "version": "1.70.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "libpsl",
-            "version": "0.22.0"
+            "version": "0.23.3"
           },
           {
             "licenses": [
@@ -880,14 +880,14 @@
               "GPLv2"
             ],
             "name": "mariadb114-client",
-            "version": "11.4.12"
+            "version": "11.4.13"
           },
           {
             "licenses": [
               "GPLv2"
             ],
             "name": "mariadb114-server",
-            "version": "11.4.12"
+            "version": "11.4.13"
           },
           {
             "licenses": [
@@ -908,7 +908,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.1_1"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -922,7 +922,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.4.4_1"
+            "version": "3.5.0"
           },
           {
             "licenses": [
@@ -985,9 +985,9 @@
       }
     },
     "11.8-pkg-latest-amd64": {
-      "app_version": "11.8.8",
+      "app_version": "11.8.9",
       "arch": "amd64",
-      "generated": "2026-08-11T09:48:28Z",
+      "generated": "2026-08-29T17:06:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1227,7 +1227,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.89.0_3"
+            "version": "1.91.0"
           },
           {
             "licenses": [
@@ -1241,7 +1241,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -1262,7 +1262,7 @@
               "GPLv2"
             ],
             "name": "galera26",
-            "version": "26.4.25"
+            "version": "26.4.25_1"
           },
           {
             "licenses": [
@@ -1334,14 +1334,14 @@
               "MIT"
             ],
             "name": "libnghttp2",
-            "version": "1.69.0"
+            "version": "1.70.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "libpsl",
-            "version": "0.22.0"
+            "version": "0.23.3"
           },
           {
             "licenses": [
@@ -1371,14 +1371,14 @@
               "GPLv2"
             ],
             "name": "mariadb118-client",
-            "version": "11.8.8"
+            "version": "11.8.9"
           },
           {
             "licenses": [
               "GPLv2"
             ],
             "name": "mariadb118-server",
-            "version": "11.8.8"
+            "version": "11.8.9"
           },
           {
             "licenses": [
@@ -1399,7 +1399,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.1_1"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -1413,7 +1413,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.4.4_1"
+            "version": "3.5.0"
           },
           {
             "licenses": [
@@ -1476,9 +1476,9 @@
       }
     },
     "12.3-pkg-latest-amd64": {
-      "app_version": "12.3.2_1",
+      "app_version": "12.3.3",
       "arch": "amd64",
-      "generated": "2026-08-11T09:48:36Z",
+      "generated": "2026-08-29T17:07:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1718,7 +1718,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.89.0_3"
+            "version": "1.91.0"
           },
           {
             "licenses": [
@@ -1732,7 +1732,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -1753,7 +1753,7 @@
               "GPLv2"
             ],
             "name": "galera26",
-            "version": "26.4.25"
+            "version": "26.4.25_1"
           },
           {
             "licenses": [
@@ -1825,14 +1825,14 @@
               "MIT"
             ],
             "name": "libnghttp2",
-            "version": "1.69.0"
+            "version": "1.70.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "libpsl",
-            "version": "0.22.0"
+            "version": "0.23.3"
           },
           {
             "licenses": [
@@ -1862,14 +1862,14 @@
               "GPLv2"
             ],
             "name": "mariadb123-client",
-            "version": "12.3.2_1"
+            "version": "12.3.3"
           },
           {
             "licenses": [
               "GPLv2"
             ],
             "name": "mariadb123-server",
-            "version": "12.3.2_1"
+            "version": "12.3.3"
           },
           {
             "licenses": [
@@ -1890,7 +1890,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.1_1"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -1904,7 +1904,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.4.4_1"
+            "version": "3.5.0"
           },
           {
             "licenses": [
