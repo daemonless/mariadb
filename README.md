@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/mariadb/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/mariadb/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/mariadb?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/mariadb/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/mariadb?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/mariadb)
 
 Drop-in replacement for MySQL built by the original authors — extends core MySQL functionality with alternate storage engines, server optimizations, and patches.
 
@@ -83,7 +84,7 @@ services:
   mariadb:
     name: mariadb
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
       - expose: '3306:3306 proto:tcp'
     oci:
       user: root
@@ -109,13 +110,18 @@ volumes:
 
 ARG tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/mariadb:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Podman CLI
 
@@ -137,6 +143,7 @@ Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
+
 ```bash
 appjail oci run -Pd \
   -o overwrite=force \
@@ -155,21 +162,26 @@ appjail oci run -Pd \
   ghcr.io/daemonless/mariadb:latest mariadb
 ```
 
-Save as `run.sh`, then run `sh run.sh`.
+Save the files above, then run `sh run.sh`.
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Bastille
 
 > [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
 
 ```yaml
 services:
   mariadb:
+    name: mariadb
     image: "ghcr.io/daemonless/mariadb:latest"
-    container_name: mariadb
-    network_mode: host  # jail shares host networking
+    network:
+      - mode: host
     environment:
       - PUID=1000
       - PGID=1000
@@ -178,9 +190,11 @@ services:
       - MYSQL_DATABASE=mydb
       - MYSQL_USER=myuser
       - MYSQL_PASSWORD=mypassword
+    volumes:
+      - "/path/to/containers/mariadb:/config"
 ```
 
-Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
 
 ```bash
 bastille create -O \
@@ -191,7 +205,7 @@ bastille create -O \
   --env MYSQL_DATABASE=mydb \
   --env MYSQL_USER=myuser \
   --env MYSQL_PASSWORD=mypassword \
-  --data-path /path/to/containers/mariadb \
+  --volume /path/to/containers/mariadb /config \
   mariadb ghcr.io/daemonless/mariadb:latest inherit
 ```
 

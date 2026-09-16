@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-05T07:41:27Z",
+  "generated": "2026-09-16T23:47:22Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-amd64": {
       "app_version": "10.11.19",
       "arch": "amd64",
-      "generated": "2026-09-05T07:40:22Z",
+      "generated": "2026-09-16T23:45:25Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -259,14 +259,14 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.21.0"
+            "version": "8.22.0"
           },
           {
             "licenses": [
@@ -382,7 +382,7 @@
               "MIT"
             ],
             "name": "libxml2",
-            "version": "2.15.3"
+            "version": "2.15.4"
           },
           {
             "licenses": [
@@ -431,7 +431,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0"
+            "version": "3.5.0_1"
           },
           {
             "licenses": [
@@ -496,7 +496,7 @@
     "11.4-pkg-latest-amd64": {
       "app_version": "11.4.13",
       "arch": "amd64",
-      "generated": "2026-09-05T07:39:46Z",
+      "generated": "2026-09-16T23:45:26Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -750,14 +750,14 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.21.0"
+            "version": "8.22.0"
           },
           {
             "licenses": [
@@ -873,7 +873,7 @@
               "MIT"
             ],
             "name": "libxml2",
-            "version": "2.15.3"
+            "version": "2.15.4"
           },
           {
             "licenses": [
@@ -922,7 +922,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0"
+            "version": "3.5.0_1"
           },
           {
             "licenses": [
@@ -987,7 +987,7 @@
     "11.8-pkg-latest-amd64": {
       "app_version": "11.8.9",
       "arch": "amd64",
-      "generated": "2026-09-05T07:40:26Z",
+      "generated": "2026-09-16T23:45:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1241,14 +1241,14 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.21.0"
+            "version": "8.22.0"
           },
           {
             "licenses": [
@@ -1364,7 +1364,7 @@
               "MIT"
             ],
             "name": "libxml2",
-            "version": "2.15.3"
+            "version": "2.15.4"
           },
           {
             "licenses": [
@@ -1413,7 +1413,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0"
+            "version": "3.5.0_1"
           },
           {
             "licenses": [
@@ -1478,7 +1478,7 @@
     "12.3-pkg-latest-amd64": {
       "app_version": "12.3.3",
       "arch": "amd64",
-      "generated": "2026-09-05T07:40:22Z",
+      "generated": "2026-09-16T23:46:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1732,14 +1732,14 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.21.0"
+            "version": "8.22.0"
           },
           {
             "licenses": [
@@ -1855,7 +1855,7 @@
               "MIT"
             ],
             "name": "libxml2",
-            "version": "2.15.3"
+            "version": "2.15.4"
           },
           {
             "licenses": [
@@ -1904,7 +1904,7 @@
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0"
+            "version": "3.5.0_1"
           },
           {
             "licenses": [
