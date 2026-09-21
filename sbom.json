@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-16T23:47:22Z",
+  "generated": "2026-09-21T22:36:49Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-amd64": {
       "app_version": "10.11.19",
       "arch": "amd64",
-      "generated": "2026-09-16T23:45:25Z",
+      "generated": "2026-09-21T22:26:48Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -49,6 +49,13 @@
               "CDDL-1.0"
             ],
             "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -174,6 +181,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -238,7 +252,7 @@
               "GPLv3+"
             ],
             "name": "bash",
-            "version": "5.3.15"
+            "version": "5.3.20"
           },
           {
             "licenses": [
@@ -424,14 +438,14 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0_1"
+            "version": "3.5.0_2"
           },
           {
             "licenses": [
@@ -460,7 +474,7 @@
               "BSD2CLAUSE"
             ],
             "name": "xxhash",
-            "version": "0.8.3"
+            "version": "0.8.4"
           },
           {
             "licenses": [
@@ -482,7 +496,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 65,
+        "freebsd": 67,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -490,13 +504,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 65
+        "total": 67
       }
     },
     "11.4-pkg-latest-amd64": {
       "app_version": "11.4.13",
       "arch": "amd64",
-      "generated": "2026-09-16T23:45:26Z",
+      "generated": "2026-09-21T22:19:51Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -540,6 +554,13 @@
               "CDDL-1.0"
             ],
             "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -665,6 +686,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -729,7 +757,7 @@
               "GPLv3+"
             ],
             "name": "bash",
-            "version": "5.3.15"
+            "version": "5.3.20"
           },
           {
             "licenses": [
@@ -915,14 +943,14 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0_1"
+            "version": "3.5.0_2"
           },
           {
             "licenses": [
@@ -951,7 +979,7 @@
               "BSD2CLAUSE"
             ],
             "name": "xxhash",
-            "version": "0.8.3"
+            "version": "0.8.4"
           },
           {
             "licenses": [
@@ -973,7 +1001,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 65,
+        "freebsd": 67,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -981,13 +1009,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 65
+        "total": 67
       }
     },
     "11.8-pkg-latest-amd64": {
       "app_version": "11.8.9",
       "arch": "amd64",
-      "generated": "2026-09-16T23:45:35Z",
+      "generated": "2026-09-21T22:07:39Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1031,6 +1059,13 @@
               "CDDL-1.0"
             ],
             "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -1156,6 +1191,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -1220,7 +1262,7 @@
               "GPLv3+"
             ],
             "name": "bash",
-            "version": "5.3.15"
+            "version": "5.3.20"
           },
           {
             "licenses": [
@@ -1406,14 +1448,14 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0_1"
+            "version": "3.5.0_2"
           },
           {
             "licenses": [
@@ -1442,7 +1484,7 @@
               "BSD2CLAUSE"
             ],
             "name": "xxhash",
-            "version": "0.8.3"
+            "version": "0.8.4"
           },
           {
             "licenses": [
@@ -1464,7 +1506,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 65,
+        "freebsd": 67,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1472,13 +1514,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 65
+        "total": 67
       }
     },
     "12.3-pkg-latest-amd64": {
       "app_version": "12.3.3",
       "arch": "amd64",
-      "generated": "2026-09-16T23:46:17Z",
+      "generated": "2026-09-21T22:16:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1522,6 +1564,13 @@
               "CDDL-1.0"
             ],
             "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -1647,6 +1696,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -1711,7 +1767,7 @@
               "GPLv3+"
             ],
             "name": "bash",
-            "version": "5.3.15"
+            "version": "5.3.20"
           },
           {
             "licenses": [
@@ -1897,14 +1953,14 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
               "GPLv3+"
             ],
             "name": "rsync",
-            "version": "3.5.0_1"
+            "version": "3.5.0_2"
           },
           {
             "licenses": [
@@ -1933,7 +1989,7 @@
               "BSD2CLAUSE"
             ],
             "name": "xxhash",
-            "version": "0.8.3"
+            "version": "0.8.4"
           },
           {
             "licenses": [
@@ -1955,7 +2011,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 65,
+        "freebsd": 67,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1963,7 +2019,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 65
+        "total": 67
       }
     }
   }
