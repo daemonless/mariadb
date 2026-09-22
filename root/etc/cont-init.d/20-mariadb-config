@@ -22,7 +22,25 @@ echo "Setting up MariaDB..."
 # Create required directories
 mkdir -p "$DATADIR" "$MYSQL_DIR/log/mysql" /var/run/mysql
 
+# custom.cnf is the supported way to pass server options: the container's CMD
+# never reaches this image (init execs s6-svscan and drops it), so a compose
+# `command:` is a no-op.  Created here rather than at first-init so datadirs
+# that predate this file get one too -- the server refuses to start if
+# --defaults-extra-file names a file that is not there.
+if [ ! -f "$MYSQL_DIR/custom.cnf" ]; then
+    cat > "$MYSQL_DIR/custom.cnf" << 'EOF'
+[mysqld]
+# Custom MariaDB configuration -- loaded on every start.
+# Add your settings here, e.g.:
+#   character-set-server = utf8mb4
+#   collation-server     = utf8mb4_unicode_ci
+#   innodb_buffer_pool_size = 512M
+EOF
+fi
+
 # Set ownership (bsd:bsd is UID/GID 1000:1000)
 chown -R bsd:bsd "$MYSQL_DIR" /var/run/mysql
+# MariaDB ignores an option file that is group- or world-writable.
+chmod 644 "$MYSQL_DIR/custom.cnf"
 
 echo "MariaDB configuration complete"

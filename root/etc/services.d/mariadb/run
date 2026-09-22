@@ -4,6 +4,14 @@
 MYSQL_DIR="${MYSQL_DIR:-/config}"
 DATADIR="${DATADIR:-$MYSQL_DIR/databases}"
 
+# cont-init writes custom.cnf; guard anyway, because mariadbd aborts outright
+# when --defaults-extra-file names a file that does not exist.
+if [ -f "$MYSQL_DIR/custom.cnf" ]; then
+    DEFAULTS="--defaults-extra-file=$MYSQL_DIR/custom.cnf"
+else
+    DEFAULTS=""
+fi
+
 # Initialize database if needed
 if [ ! -d "$DATADIR/mysql" ]; then
     echo "Initializing MariaDB database..."
@@ -29,18 +37,9 @@ if [ ! -d "$DATADIR/mysql" ]; then
     # owned by root — re-own the datadir to bsd so PUID owns everything under /config
     chown -R bsd:bsd "$DATADIR"
 
-    # Create custom config if it doesn't exist
-    if [ ! -f "$MYSQL_DIR/custom.cnf" ]; then
-        cat > "$MYSQL_DIR/custom.cnf" << 'EOF'
-[mysqld]
-# Custom MariaDB configuration
-# Add your settings here
-EOF
-        chown bsd:bsd "$MYSQL_DIR/custom.cnf"
-    fi
-
     # Start temporarily to set up users/databases
     /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+        ${DEFAULTS} \
         --datadir="$DATADIR" \
         --socket=/var/run/mysql/mysql.sock \
         --skip-networking \
@@ -125,6 +124,7 @@ fi
 
 echo "Starting MariaDB..."
 exec /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+    ${DEFAULTS} \
     --datadir="$DATADIR" \
     --socket=/var/run/mysql/mysql.sock \
     --bind-address=0.0.0.0 \
