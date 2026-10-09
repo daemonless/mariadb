@@ -47,7 +47,7 @@ services:
       - MYSQL_USER=myuser  # User to create on first run
       - MYSQL_PASSWORD=mypassword  # Password for MYSQL_USER
     volumes:
-      - "/path/to/containers/mariadb:/config"
+      - "/containers/mariadb:/config"
     ports:
       - "3306:3306"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
@@ -100,7 +100,7 @@ services:
       - mariadb: /config
 volumes:
   mariadb:
-    device: '/path/to/containers/mariadb'
+    device: '/containers/mariadb'
 ```
 
 **Makejail**:
@@ -116,53 +116,6 @@ OPTION from=ghcr.io/daemonless/mariadb:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
-### Podman CLI
-
-```bash
-podman run -d --name mariadb \
-  -p 3306:3306 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=Etc/UTC \
-  -e MYSQL_ROOT_PASSWORD=changeme \
-  -e MYSQL_DATABASE=mydb \
-  -e MYSQL_USER=myuser \
-  -e MYSQL_PASSWORD=mypassword \
-  -v /path/to/containers/mariadb:/config \
-  ghcr.io/daemonless/mariadb:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o expose="3306:3306 proto:tcp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=Etc/UTC \
-  -e MYSQL_ROOT_PASSWORD=changeme \
-  -e MYSQL_DATABASE=mydb \
-  -e MYSQL_USER=myuser \
-  -e MYSQL_PASSWORD=mypassword \
-  -o fstab="/path/to/containers/mariadb /config <pseudofs>" \
-  ghcr.io/daemonless/mariadb:latest mariadb
-```
-
-Save the files above, then run `sh run.sh`.
 
 
 > [!WARNING]
@@ -191,48 +144,10 @@ services:
       - MYSQL_USER=myuser
       - MYSQL_PASSWORD=mypassword
     volumes:
-      - "/path/to/containers/mariadb:/config"
+      - "/containers/mariadb:/config"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=Etc/UTC \
-  --env MYSQL_ROOT_PASSWORD=changeme \
-  --env MYSQL_DATABASE=mydb \
-  --env MYSQL_USER=myuser \
-  --env MYSQL_PASSWORD=mypassword \
-  --volume /path/to/containers/mariadb /config \
-  mariadb ghcr.io/daemonless/mariadb:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy mariadb
-  containers.podman.podman_container:
-    name: mariadb
-    image: "ghcr.io/daemonless/mariadb:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "Etc/UTC"
-      MYSQL_ROOT_PASSWORD: "changeme"
-      MYSQL_DATABASE: "mydb"
-      MYSQL_USER: "myuser"
-      MYSQL_PASSWORD: "mypassword"
-    ports:
-      - "3306:3306"
-    volumes:
-      - "/path/to/containers/mariadb:/config"
-```
-
-Save as `mariadb-deploy.yaml`, then run `ansible-playbook mariadb-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 ## Parameters
 
