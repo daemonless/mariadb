@@ -27,12 +27,23 @@ mkdir -p "$DATADIR" "$MYSQL_DIR/log/mysql" /var/run/mysql
 # `command:` is a no-op.  Created here rather than at first-init so datadirs
 # that predate this file get one too -- the server refuses to start if
 # --defaults-extra-file names a file that is not there.
+#
+# A new datadir defaults to utf8mb4, as MariaDB on Linux does (Debian's
+# packaging; 11.6+ upstream). The FreeBSD packages before 11.6 default to
+# latin1, and apps written against utf8mb4 break on it: uptime-kuma's
+# migration fails with "Row size too large" on 11.4. An existing datadir keeps
+# the charset its tables were made with.
 if [ ! -f "$MYSQL_DIR/custom.cnf" ]; then
-    cat > "$MYSQL_DIR/custom.cnf" << 'EOF'
+    if [ -d "$DATADIR/mysql" ]; then
+        charset="#   character-set-server = utf8mb4"
+    else
+        charset="character-set-server = utf8mb4"
+    fi
+    cat > "$MYSQL_DIR/custom.cnf" << EOF
 [mysqld]
 # Custom MariaDB configuration -- loaded on every start.
+$charset
 # Add your settings here, e.g.:
-#   character-set-server = utf8mb4
 #   collation-server     = utf8mb4_unicode_ci
 #   innodb_buffer_pool_size = 512M
 EOF
