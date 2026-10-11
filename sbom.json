@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-09T14:54:55Z",
+  "generated": "2026-10-11T18:07:30Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-amd64": {
       "app_version": "10.11.19",
       "arch": "amd64",
-      "generated": "2026-10-09T14:47:48Z",
+      "generated": "2026-10-11T18:06:16Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -273,7 +273,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -510,7 +510,7 @@
     "11.4-pkg-latest-amd64": {
       "app_version": "11.4.13",
       "arch": "amd64",
-      "generated": "2026-10-09T14:48:28Z",
+      "generated": "2026-10-11T18:05:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -778,7 +778,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -1015,7 +1015,7 @@
     "11.8-pkg-latest-amd64": {
       "app_version": "11.8.9",
       "arch": "amd64",
-      "generated": "2026-10-09T14:51:18Z",
+      "generated": "2026-10-11T18:06:08Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1283,7 +1283,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -1520,7 +1520,7 @@
     "12.3-pkg-latest-amd64": {
       "app_version": "12.3.3",
       "arch": "amd64",
-      "generated": "2026-10-09T14:47:53Z",
+      "generated": "2026-10-11T18:06:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1788,7 +1788,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
