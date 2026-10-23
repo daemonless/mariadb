@@ -1,19 +1,6 @@
 #!/bin/sh
 # MariaDB configuration setup
 
-# Load secrets from *_FILE environment variables (Docker secrets pattern)
-for var in $(env | grep '_FILE=' | cut -d= -f1); do
-    base_var="${var%_FILE}"
-    file_path="$(eval echo \"\$$var\")"
-    if [ -f "$file_path" ]; then
-        value="$(cat "$file_path")"
-        export "$base_var"="$value"
-        echo "Loaded secret for $base_var from $file_path"
-    else
-        echo "Warning: Secret file $file_path not found for $var"
-    fi
-done
-
 MYSQL_DIR="${MYSQL_DIR:-/config}"
 DATADIR="${DATADIR:-$MYSQL_DIR/databases}"
 
@@ -22,9 +9,9 @@ echo "Setting up MariaDB..."
 # Create required directories
 mkdir -p "$DATADIR" "$MYSQL_DIR/log/mysql" /var/run/mysql
 
-# custom.cnf is the supported way to pass server options: the container's CMD
-# never reaches this image (init execs s6-svscan and drops it), so a compose
-# `command:` is a no-op.  Created here rather than at first-init so datadirs
+# custom.cnf is the supported way to pass server options: a compose `command:`
+# replaces the image's CMD (/daemonless/libexec/mariadb, which sets up and
+# starts the server), so don't use one.  Created here rather than at first-init so datadirs
 # that predate this file get one too -- the server refuses to start if
 # --defaults-extra-file names a file that is not there.
 #

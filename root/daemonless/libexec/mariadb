@@ -1,10 +1,24 @@
 #!/bin/sh
-# MariaDB s6 service
+# Start mariadb; /init has already dropped to the run user.
+
+# Here, not in init.d: an init script's exports end with its process.
+# Load secrets from *_FILE environment variables (Docker secrets pattern)
+for var in $(env | grep '_FILE=' | cut -d= -f1); do
+    base_var="${var%_FILE}"
+    file_path="$(eval echo \"\$$var\")"
+    if [ -f "$file_path" ]; then
+        value="$(cat "$file_path")"
+        export "$base_var"="$value"
+        echo "Loaded secret for $base_var from $file_path"
+    else
+        echo "Warning: Secret file $file_path not found for $var"
+    fi
+done
 
 MYSQL_DIR="${MYSQL_DIR:-/config}"
 DATADIR="${DATADIR:-$MYSQL_DIR/databases}"
 
-# cont-init writes custom.cnf; guard anyway, because mariadbd aborts outright
+# init.d writes custom.cnf; guard anyway, because mariadbd aborts outright
 # when --defaults-extra-file names a file that does not exist.
 if [ -f "$MYSQL_DIR/custom.cnf" ]; then
     DEFAULTS="--defaults-extra-file=$MYSQL_DIR/custom.cnf"
@@ -33,12 +47,8 @@ if [ ! -d "$DATADIR/mysql" ]; then
         exit 1
     fi
 
-    # mariadb-install-db runs as root and leaves some files (e.g. mariadb_upgrade_info)
-    # owned by root — re-own the datadir to bsd so PUID owns everything under /config
-    chown -R bsd:bsd "$DATADIR"
-
     # Start temporarily to set up users/databases
-    /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+    /usr/local/libexec/mariadbd \
         ${DEFAULTS} \
         --datadir="$DATADIR" \
         --socket=/var/run/mysql/mysql.sock \
@@ -123,7 +133,7 @@ EOF
 fi
 
 echo "Starting MariaDB..."
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/libexec/mariadbd \
+exec /usr/local/libexec/mariadbd \
     ${DEFAULTS} \
     --datadir="$DATADIR" \
     --socket=/var/run/mysql/mysql.sock \
