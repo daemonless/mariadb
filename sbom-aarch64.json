@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-11T18:36:40Z",
+  "generated": "2026-10-23T09:44:03Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-aarch64": {
       "app_version": "10.11.19",
       "arch": "aarch64",
-      "generated": "2026-10-11T18:33:20Z",
+      "generated": "2026-10-23T09:41:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -238,7 +238,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -273,7 +273,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -281,13 +281,6 @@
             ],
             "name": "curl",
             "version": "8.22.0"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -449,20 +442,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "GPLv2",
               "LGPL21"
             ],
@@ -496,7 +475,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 67,
+        "freebsd": 64,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -504,13 +483,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 67
+        "total": 64
       }
     },
     "11.4-pkg-latest-aarch64": {
       "app_version": "11.4.13",
       "arch": "aarch64",
-      "generated": "2026-10-11T18:33:25Z",
+      "generated": "2026-10-23T09:41:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -694,7 +673,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -743,7 +722,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -778,7 +757,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -786,13 +765,6 @@
             ],
             "name": "curl",
             "version": "8.22.0"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -954,20 +926,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "GPLv2",
               "LGPL21"
             ],
@@ -1001,7 +959,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 67,
+        "freebsd": 64,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1009,13 +967,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 67
+        "total": 64
       }
     },
     "11.8-pkg-latest-aarch64": {
       "app_version": "11.8.9",
       "arch": "aarch64",
-      "generated": "2026-10-11T18:33:31Z",
+      "generated": "2026-10-23T09:41:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1199,7 +1157,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1248,7 +1206,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1283,7 +1241,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -1291,13 +1249,6 @@
             ],
             "name": "curl",
             "version": "8.22.0"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -1459,20 +1410,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "GPLv2",
               "LGPL21"
             ],
@@ -1506,7 +1443,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 67,
+        "freebsd": 64,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1514,13 +1451,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 67
+        "total": 64
       }
     },
     "12.3-pkg-latest-aarch64": {
       "app_version": "12.3.3",
       "arch": "aarch64",
-      "generated": "2026-10-11T18:33:36Z",
+      "generated": "2026-10-23T09:41:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1704,7 +1641,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1753,7 +1690,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1788,7 +1725,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -1796,13 +1733,6 @@
             ],
             "name": "curl",
             "version": "8.22.0"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -1964,20 +1894,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "GPLv2",
               "LGPL21"
             ],
@@ -2011,7 +1927,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 67,
+        "freebsd": 64,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2019,7 +1935,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 67
+        "total": 64
       }
     }
   }
