@@ -77,14 +77,14 @@ EOF
     # Create database if specified
     if [ -n "$MYSQL_DATABASE" ]; then
         echo "Creating database '$MYSQL_DATABASE'..."
-        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" \
+        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -uroot -p"$MYSQL_ROOT_PASSWORD" \
             -e "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE\`;"
     fi
 
     # Create user if specified
     if [ -n "$MYSQL_USER" ] && [ -n "$MYSQL_PASSWORD" ]; then
         echo "Creating user '$MYSQL_USER'..."
-        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" << EOF
+        /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -uroot -p"$MYSQL_ROOT_PASSWORD" << EOF
 CREATE USER IF NOT EXISTS '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE:-*}\`.* TO '${MYSQL_USER}'@'%';
 FLUSH PRIVILEGES;
@@ -107,11 +107,11 @@ EOF
                     ;;
                 *.sql)
                     echo "Running $f"
-                    /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD" < "$f"
+                    /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -uroot -p"$MYSQL_ROOT_PASSWORD" < "$f"
                     ;;
                 *.sql.gz)
                     echo "Running $f"
-                    gunzip -c "$f" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD"
+                    gunzip -c "$f" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -uroot -p"$MYSQL_ROOT_PASSWORD"
                     ;;
                 *)
                     echo "Ignoring $f"
@@ -123,7 +123,7 @@ EOF
     # Run remote SQL if specified
     if [ -n "$REMOTE_SQL" ]; then
         echo "Fetching and running remote SQL from $REMOTE_SQL"
-        fetch -qo - "$REMOTE_SQL" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -p"$MYSQL_ROOT_PASSWORD"
+        fetch -qo - "$REMOTE_SQL" | /usr/local/bin/mariadb -S /var/run/mysql/mysql.sock -uroot -p"$MYSQL_ROOT_PASSWORD"
     fi
 
     # Stop temporary instance
