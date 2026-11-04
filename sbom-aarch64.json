@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-27T09:35:45Z",
+  "generated": "2026-11-04T13:51:45Z",
   "image": "mariadb",
   "tags": {
     "10.11-pkg-latest-aarch64": {
       "app_version": "10.11.19",
       "arch": "aarch64",
-      "generated": "2026-10-27T09:32:43Z",
+      "generated": "2026-11-04T13:47:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -266,21 +266,21 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -489,7 +489,7 @@
     "11.4-pkg-latest-aarch64": {
       "app_version": "11.4.13",
       "arch": "aarch64",
-      "generated": "2026-10-27T09:32:47Z",
+      "generated": "2026-11-04T13:47:42Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -673,7 +673,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -750,21 +750,21 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -973,7 +973,7 @@
     "11.8-pkg-latest-aarch64": {
       "app_version": "11.8.9",
       "arch": "aarch64",
-      "generated": "2026-10-27T09:32:51Z",
+      "generated": "2026-11-04T13:47:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1157,7 +1157,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -1234,21 +1234,21 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -1457,7 +1457,7 @@
     "12.3-pkg-latest-aarch64": {
       "app_version": "12.3.3",
       "arch": "aarch64",
-      "generated": "2026-10-27T09:32:56Z",
+      "generated": "2026-11-04T13:47:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1641,7 +1641,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -1718,21 +1718,21 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
